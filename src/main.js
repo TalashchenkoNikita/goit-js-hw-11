@@ -11,6 +11,7 @@ form.addEventListener('submit', e => {
   e.preventDefault();
   const data = new FormData(form);
   const request = data.get('search-text');
+  render.clearGallery();
   render.showLoader();
   pixabay.getImagesByQuery(request).then(images => {
     if (images.length === 0) {

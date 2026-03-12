@@ -22,7 +22,7 @@ return `<li class="gallery-item">
     </li>`;
 }
 
-function clearGallery() {
+export function clearGallery() {
     gallery.innerHTML = "";
 }
 
@@ -35,7 +35,6 @@ export function hideLoader() {
 }
 
 export function createGallery(items) {
-  clearGallery();
   hideLoader();
   gallery.insertAdjacentHTML("beforeend", items.map(itemTemplate).join(''));
   lightbox.refresh();

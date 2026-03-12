@@ -34,6 +34,7 @@ form.addEventListener('submit', e => {
       return;
     }
     render.createGallery(images);
+    render.hideLoader();
   }).catch(error => {   
       iziToast.show({
         message: `Error: ${error}`,

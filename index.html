@@ -6,24 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vanilla App Template</title>
     <script type="module" crossorigin src="/goit-js-hw-11/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-CBxvsRsL.js">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-AL2zCFOW.css">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-CFrPtiMb.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-11/assets/vendor-BLkLXWwN.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/vendor-CX4EDM7x.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-11/assets/index-BuY92Ssr.css">
   </head>
   <body>
     <main>
-      <form class="form">
-        <label>
-          <input
-            type="text"
-            name="search-text"
-            placeholder="Search images..."
-            required
-          />
-        </label>
-        <button type="submit">Search</button>
-      </form>
-       <ul class='gallery'></ul>
+      <div class="container">
+        <span class="loader" style="display: none"></span>
+        <form class="form">
+          <label>
+            <input
+              type="text"
+              name="search-text"
+              placeholder="Search images..."
+              required
+            />
+          </label>
+          <button type="submit">Search</button>
+        </form>
+        <ul class="gallery"></ul>
+      </div>
     </main>
   </body>
 </html>

@@ -1,5 +1,4 @@
 import axios from 'axios';
-import * as render from './js/render-functions.js';
 
 axios.defaults.baseURL = 'https://pixabay.com';
 

@@ -1,18 +1,29 @@
 import * as pixabay from './js/pixabay-api.js';
 import * as render from './js/render-functions.js';
+// Описаний у документації
+import iziToast from 'izitoast';
+// Додатковий імпорт стилів
+import 'izitoast/dist/css/iziToast.min.css';
 
-const form = document.querySelector(".form");
+const form = document.querySelector('.form');
 
-form.addEventListener("submit", (e) => {
-    e.preventDefault();
-    const data = new FormData(form);
-    const request = data.get('search-text');
-    pixabay.getImagesByQuery(request)
-    .then(images => {
-        if(images.length === 0) {
-            console.log("Sorry, there are no images matching your search query. Please try again!");
-            return;
-        }
-        render.itemsTemplate(images);
-    });
-})
+form.addEventListener('submit', e => {
+  e.preventDefault();
+  const data = new FormData(form);
+  const request = data.get('search-text');
+  render.showLoader();
+  pixabay.getImagesByQuery(request).then(images => {
+    if (images.length === 0) {
+      iziToast.show({
+        message: `Sorry, there are no images matching your search query. 
+        Please try again!`,
+        color: "red",
+        position:"topRight"
+      });
+      render.hideLoader();
+      return;
+    }
+    render.createGallery(images);
+  });
+  form.reset();
+});

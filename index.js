@@ -8,6 +8,6 @@ import{a as l,S as d,i as f}from"./assets/vendor-BLkLXWwN.js";(function(){const 
         <li class="stats-item"><p>comments</p><p>${t.comments}</p></li>
         <li class="stats-item"><p>downloads</p><p>${t.downloads}</p></li>   
       </ul>
-    </li>`}function g(){c.innerHTML=""}function L(){u.style.display="block"}function p(){u.style.display="none"}function b(t){g(),p(),c.insertAdjacentHTML("beforeend",t.map(h).join("")),y.refresh()}const n=document.querySelector(".form");n.addEventListener("submit",t=>{t.preventDefault();const a=new FormData(n).get("search-text");L(),m(a).then(s=>{if(s.length===0){f.show({message:`Sorry, there are no images matching your search query. 
+    </li>`}function g(){c.innerHTML=""}function L(){u.style.display="block"}function p(){u.style.display="none"}function b(t){p(),c.insertAdjacentHTML("beforeend",t.map(h).join("")),y.refresh()}const n=document.querySelector(".form");n.addEventListener("submit",t=>{t.preventDefault();const a=new FormData(n).get("search-text");g(),L(),m(a).then(s=>{if(s.length===0){f.show({message:`Sorry, there are no images matching your search query. 
         Please try again!`,color:"red",position:"topRight"}),p();return}b(s)}),n.reset()});
 //# sourceMappingURL=index.js.map

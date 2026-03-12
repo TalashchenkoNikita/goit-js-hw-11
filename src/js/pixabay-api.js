@@ -1,4 +1,6 @@
 import axios from 'axios';
+import * as render from './js/render-functions.js';
+
 axios.defaults.baseURL = 'https://pixabay.com';
 
 export function getImagesByQuery(query) {
@@ -15,7 +17,7 @@ export function getImagesByQuery(query) {
     .then(response => {
       return response.data.hits;
     })
-    .catch(error => {
+    .catch(error => {   
       console.log(error);
     });
 }

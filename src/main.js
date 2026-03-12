@@ -11,6 +11,15 @@ form.addEventListener('submit', e => {
   e.preventDefault();
   const data = new FormData(form);
   const request = data.get('search-text');
+  if(!request){
+    iziToast.show({
+        message: `Sorry, there are no images matching your search query. 
+        Please try again!`,
+        color: "red",
+        position:"topRight"
+      });
+      return;
+  }
   render.clearGallery();
   render.showLoader();
   pixabay.getImagesByQuery(request).then(images => {
@@ -25,6 +34,13 @@ form.addEventListener('submit', e => {
       return;
     }
     render.createGallery(images);
-  });
+  }).catch(error => {   
+      iziToast.show({
+        message: `Error: ${error}`,
+        color: "red",
+        position:"topRight"
+      })
+      render.hideLoader();
+    });
   form.reset();
 });

@@ -32,8 +32,8 @@ body {
   min-height: 100vh;
   margin: 0;
   background-image: linear-gradient( 
-    rgba(247, 162, 162, 0.468), 
-    rgba(248, 188, 215, 0.397)),
+    rgba(182, 241, 233, 0.347), 
+    rgba(216, 173, 192, 0.397)),
     url("../img/bg-image.avif");
     background-size: cover;        
     background-position: center;   

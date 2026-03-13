@@ -30,18 +30,17 @@ form.addEventListener('submit', e => {
         color: "red",
         position:"topRight"
       });
-      render.hideLoader();
       return;
     }
     render.createGallery(images);
-    render.hideLoader();
   }).catch(error => {   
       iziToast.show({
         message: `Error: ${error}`,
         color: "red",
         position:"topRight"
       })
+  }).finally(() => {
       render.hideLoader();
-    });
+  });
   form.reset();
 });

@@ -4,7 +4,7 @@ axios.defaults.baseURL = 'https://pixabay.com';
 
 export function getImagesByQuery(query) {
   return axios
-    .get('api/', {
+    .get('/api/', {
       params: {
         key: '50262492-fe39fd1e0043f380ecc767a24',
         q: `${query}`,

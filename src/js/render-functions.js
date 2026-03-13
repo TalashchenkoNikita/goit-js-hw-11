@@ -14,10 +14,10 @@ return `<li class="gallery-item">
         <img src="${image.webformatURL}" alt="${image.tags}">
       </a>
       <ul class="stats">
-        <li class="stats-item"><p>likes</p><p>${image.likes}</p></li>
-        <li class="stats-item"><p>views</p><p>${image.views}</p></li>
-        <li class="stats-item"><p>comments</p><p>${image.comments}</p></li>
-        <li class="stats-item"><p>downloads</p><p>${image.downloads}</p></li>   
+        <li class="stats-item"><p class="stat-title">likes</p><p class="stat-value">${image.likes}</p></li>
+        <li class="stats-item"><p class="stat-title">views</p><p class="stat-value">${image.views}</p></li>
+        <li class="stats-item"><p class="stat-title">comments</p><p class="stat-value">${image.comments}</p></li>
+        <li class="stats-item"><p class="stat-title">downloads</p><p class="stat-value">${image.downloads}</p></li>   
       </ul>
     </li>`;
 }

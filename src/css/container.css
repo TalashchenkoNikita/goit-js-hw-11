@@ -6,6 +6,9 @@
   min-width: 320px;
   max-width: 375px;
   margin: 0 auto;
+  /* background-image: linear-gradient( 
+    rgba(54, 54, 54, 0.196), 
+    rgba(84, 71, 77, 0.397)) */
 }
 /* Styles for Tablet devices */
 @media only screen and (min-width: 768px) {
